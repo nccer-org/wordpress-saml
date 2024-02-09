@@ -6,6 +6,10 @@ if ( !function_exists( 'add_action' ) ) {
 	exit;
 }
 
+if (!function_exists(‘is_plugin_active’)) {
+include_once(ABSPATH . ‘wp-admin/includes/plugin.php’);
+}
+
 use OneLogin\Saml2\Auth;
 use OneLogin\Saml2\Settings;
 
